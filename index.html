@@ -37,10 +37,12 @@
   <script>
     const yesButton = document.getElementById('yes');
     const noButton = document.getElementById('no');
+    let scale = 1; // Initial scale of the "Yes" button
 
     noButton.addEventListener('click', () => {
       // Increase the size of the "Yes" button
-      yesButton.style.transform = 'scale(1.5)';
+      scale += 0.5; // Increment the scale value
+      yesButton.style.transform = `scale(${scale})`;
     });
 
     yesButton.addEventListener('click', () => {
